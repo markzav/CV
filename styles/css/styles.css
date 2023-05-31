@@ -43,15 +43,47 @@ body {
 
 .avatar img {
   width: 180px;
-  border: 5px solid white;
   border-radius: 50%;
   margin-top: -110px;
   -webkit-box-shadow: 10px 15px 30px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 15px 30px 0px rgba(0, 0, 0, 0.75);
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;
+  -webkit-animation-name: img__border;
+          animation-name: img__border;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
+@-webkit-keyframes img__border {
+  0% {
+    border: 7px solid yellow;
+  }
+  50% {
+    border: 7px solid dodgerblue;
+  }
+  100% {
+    border: 7px solid green;
+  }
+}
+
+@keyframes img__border {
+  0% {
+    border: 7px solid yellow;
+  }
+  50% {
+    border: 7px solid dodgerblue;
+  }
+  100% {
+    border: 7px solid green;
+  }
+}
 .avatar img:hover {
   width: 450px;
   margin-bottom: -270px;
